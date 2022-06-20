@@ -10,10 +10,6 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
-            //дшгпнищщгизхщш
-            //    хлхьзгштщгт
-            //    дзлтьзщтьзт
-            //    дждттгдгтд
             //№1
             List<int> one = new List<int> { 1, 3, 4, -12, 3, 4, 4, 0, 1, 4, 1 };
             int pairsCount = 0;
