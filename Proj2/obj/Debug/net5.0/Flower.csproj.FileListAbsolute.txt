@@ -1,0 +1,16 @@
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\bin\Debug\net5.0\Flower.exe
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\bin\Debug\net5.0\Flower.deps.json
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\bin\Debug\net5.0\Flower.runtimeconfig.json
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\bin\Debug\net5.0\Flower.runtimeconfig.dev.json
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\bin\Debug\net5.0\Flower.dll
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\bin\Debug\net5.0\ref\Flower.dll
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\bin\Debug\net5.0\Flower.pdb
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.AssemblyInfo.cs
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.dll
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\ref\Flower.dll
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.pdb
+C:\Users\Admin\Documents\КПІ\Prog\Proj3\obj\Debug\net5.0\Flower.genruntimeconfig.cache
