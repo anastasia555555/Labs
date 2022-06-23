@@ -7336,11 +7336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\MusicAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\Labs\\WebAppAPI\\MusicAPI.csproj",
       "projectName": "MusicAPI",
-      "projectPath": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\MusicAPI.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\Labs\\WebAppAPI\\MusicAPI.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\Labs\\WebAppAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

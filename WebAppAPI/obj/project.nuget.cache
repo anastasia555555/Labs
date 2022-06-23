@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZPZUlmZxXBBrruCRIzT7Qx9iIaMfc9+njzYEbfCKdxxtwCudChIPQYkPc8P08vuxDO+Ng871rI5L5yLdOw5K6g==",
+  "dgSpecHash": "g0K8VXkFPhX/NXZplPjB6uzjB/Gf7nQgdh1BFA0F9RMak0BrNp1sCgO6hyHPtlwgnI+DvoowgQMHfQqVxwmOpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\MusicAPI.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\КПІ\\Prog\\WebApplication1\\Labs\\WebAppAPI\\MusicAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

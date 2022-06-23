@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMusic.Data;
 using WebApplication1.Models;
 
-namespace MyMusic.Controllers
+namespace MusicAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class VideosController : ControllerBase
+    public class VideosController : Controller
     {
         private readonly MyMusicContext _context;
 
@@ -21,79 +19,126 @@ namespace MyMusic.Controllers
             _context = context;
         }
 
-        // GET: api/Videos
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Video>>> GetVideo()
+        // GET: Videos
+        public async Task<IActionResult> Index()
         {
-            return await _context.Video.ToListAsync();
+            return View(await _context.Video.ToListAsync());
         }
 
-        // GET: api/Videos/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Video>> GetVideo(int id)
+        // GET: Videos/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            var video = await _context.Video.FindAsync(id);
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var video = await _context.Video
+                .FirstOrDefaultAsync(m => m.ID == id);
             if (video == null)
             {
                 return NotFound();
             }
 
-            return video;
+            return View(video);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutVideo(int id, Video video)
+        // GET: Videos/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // GET: Videos/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var video = await _context.Video.FindAsync(id);
+            if (video == null)
+            {
+                return NotFound();
+            }
+            return View(video);
+        }
+
+        // POST: Videos/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("ID,Name,Url")] Video video)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(video);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(video);
+        }
+
+        // POST: Videos/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Url")] Video video)
         {
             if (id != video.ID)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(video).State = EntityState.Modified;
-
-            try
+            if (ModelState.IsValid)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!VideoExists(id))
+                try
                 {
-                    return NotFound();
+                    _context.Update(video);
+                    await _context.SaveChangesAsync();
                 }
-                else
+                catch (DbUpdateConcurrencyException)
                 {
-                    throw;
+                    if (!VideoExists(video.ID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
+                return RedirectToAction(nameof(Index));
             }
-
-            return NoContent();
+            return View(video);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Video>> PostVideo(Video video)
+        // GET: Videos/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
-            _context.Video.Add(video);
-            await _context.SaveChangesAsync();
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-            return CreatedAtAction("GetVideo", new { id = video.ID }, video);
-        }
-
-        // DELETE: api/Videos/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteVideo(int id)
-        {
-            var video = await _context.Video.FindAsync(id);
+            var video = await _context.Video
+                .FirstOrDefaultAsync(m => m.ID == id);
             if (video == null)
             {
                 return NotFound();
             }
 
+            return View(video);
+        }
+
+        // POST: Videos/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var video = await _context.Video.FindAsync(id);
             _context.Video.Remove(video);
             await _context.SaveChangesAsync();
-
-            return NoContent();
+            return RedirectToAction(nameof(Index));
         }
 
         private bool VideoExists(int id)
